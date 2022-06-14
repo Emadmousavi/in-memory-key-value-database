@@ -5,12 +5,10 @@ import os
 from environs import Env
 
 def main():
-    env = Env()
-    env.read_env()
     
     args = parse_server_args()
     
-    host = env.str('HOST',args.host)
+    host = args.host
     port = args.port
     kv_dir = args.kv_dir
     kv_source = args.kv_src
