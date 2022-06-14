@@ -70,7 +70,7 @@ You can also pass in additional parameters through the command line:
 ```
 usage: lkv-server [-h HOST] [-p PORT] [-d KV_DIR] [-s KV_SRC] [-H]
 
-LittleKV Server
+KVDB Server
 
 optional arguments:
   -h HOST, --host HOST  host server should run on
@@ -103,10 +103,7 @@ You can also pass in additional parameters through the command line:
 ```
 usage: lkv-cli [-h HOST] [-p PORT] [-H] 
 
-LittleKV CLI
-
-positional arguments:
-  command               lkv commands
+KVDB CLI
 
 optional arguments:
   -h HOST, --host HOST  host client should connect to
