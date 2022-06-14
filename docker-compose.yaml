@@ -15,6 +15,9 @@ services:
       - data:/usr/src/app/data
     environment:
       - HOST=server
+    
+    depends_on:
+      - server
 
 volumes:
   data:
