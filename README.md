@@ -65,6 +65,23 @@ To run the KVDB server with the default configurations, simply run:
 kvdb-server
 ```
 
+You can also pass in additional parameters through the command line:
+
+```
+usage: lkv-server [-h HOST] [-p PORT] [-d KV_DIR] [-s KV_SRC] [-H]
+
+LittleKV Server
+
+optional arguments:
+  -h HOST, --host HOST  host server should run on
+  -p PORT, --port PORT  port server should run on
+  -d KV_DIR, --dir KV_DIR
+                        directory of target kv file
+  -s KV_SRC, --src KV_SRC
+                        name of target kv file
+  -H, --help            show this help message and exit
+```
+
 Example usage:
 
 ```
@@ -81,7 +98,21 @@ To run the KVDB CLI with the default configurrations, simply run:
 kvdb-cli
 ```
 
+You can also pass in additional parameters through the command line:
 
+```
+usage: lkv-cli [-h HOST] [-p PORT] [-H] 
+
+LittleKV CLI
+
+positional arguments:
+  command               lkv commands
+
+optional arguments:
+  -h HOST, --host HOST  host client should connect to
+  -p PORT, --port PORT  port client should connect to
+  -H, --help            show this help message and exit
+```
 Example usage:
 
 ```

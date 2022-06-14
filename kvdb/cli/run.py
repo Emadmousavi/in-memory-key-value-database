@@ -23,13 +23,14 @@ def response_to_stdout(*args):
 
 
 def main():
-    # args = parse_cli_args()
+    
     print("kvdb-cli started :))")
-    host = HOST
-    port = PORT
-    # command = args.command
-    # op = command[0]
-    # params = command[1:]
+    
+    args = parse_cli_args()
+    
+    host = args.host
+    port = args.port
+
     while(True):
 
         try:
