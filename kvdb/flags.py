@@ -12,7 +12,6 @@ def parse_server_args() -> argparse.Namespace:
 
 def parse_cli_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description='LittleKV CLI', add_help=False)
-    parser.add_argument('command', nargs='+', help='kvdb commands')
     parser.add_argument('-h', '--host', dest='host', type=str, default=HOST, help='host client should connect to')
     parser.add_argument('-p', '--port', dest='port', type=int, default=PORT, help='port client should connect to')
     parser.add_argument('-H', '--help', action='help', help='show this help message and exit')
