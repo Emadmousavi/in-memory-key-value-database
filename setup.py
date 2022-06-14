@@ -7,6 +7,7 @@ setup(
     author='Seyed Emad Mousavi',
     author_email='emadmoosavi79@gmail.com',
     license='MIT',
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
             'kvdb-cli = kvdb.cli.run:main',
