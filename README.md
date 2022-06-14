@@ -14,21 +14,26 @@ Full list of supported commands: [commands.md](/docs/commands.md)
 Make sure that you have the latest version of [Python](https://www.python.org/downloads/) installed on your machine. To download the source code, run:
 
 ```
-git clone https://github.com/J-Obog/littlekv.git
+git clone https://github.com/J-Obog/littlekv.git](https://github.com/Emadmousavi/in-memory-key-value-database.git
 ```
 
-#### Pipenv
+#### Virtualenv
 
-This project uses pipenv for dependency management and creating virtual environments. To install pipenv, run:
+first install virtual environment module:
 
 ```
-pip install pipenv
+pip install virtualenv
+```
+
+then create a virtual environment. in this case virtual environment name is 'venv'
+```
+python -m venv venv
 ```
 
 The required packages are listed in the Pipfile. To install those dependencies, run:
 
 ```
-pipenv install
+pip install -r requirements.txt
 ```
 
 ## Running KVDB
@@ -51,7 +56,7 @@ You can also pass in additional parameters through the command line:
 ```
 usage: KVDB-server [-h HOST] [-p PORT] [-d KV_DIR] [-s KV_SRC] [-H]
 
-LittleKV Server
+KVDB Server
 
 optional arguments:
   -h HOST, --host HOST  host server should run on
@@ -84,7 +89,7 @@ You can also pass in additional parameters through the command line:
 ```
 usage: KVDB-cli [-h HOST] [-p PORT] [-H] command [command ...]
 
-LittleKV CLI
+KVDB CLI
 
 positional arguments:
   command               KVDB commands
