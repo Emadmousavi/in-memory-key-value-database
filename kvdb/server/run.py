@@ -2,9 +2,13 @@ from kvdb.server.ws import KVDBSockServer
 from kvdb.store import KVStore
 from kvdb.flags import parse_server_args
 import os
+from environs import Env
 
 def main():
-    args = parse_server_args()
+    env = Env()
+    env.read_env()
+    
+    args = env.str('HOST',parse_server_args())
     
     host = args.host
     port = args.port

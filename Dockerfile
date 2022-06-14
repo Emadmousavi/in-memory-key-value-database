@@ -17,4 +17,4 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . .
 
-RUn python setup.py install
+RUN python setup.py install

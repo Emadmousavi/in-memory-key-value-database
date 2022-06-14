@@ -6,12 +6,15 @@ services:
     container_name: kvdb_server
     command: kvdb-server
 
+
   cli:
     build: .
     container_name: kvdb_cli
     command: kvdb-cli
     volumes:
       - data:/usr/src/app/data
+    environment:
+      - HOST=server
 
 volumes:
   data:
