@@ -127,7 +127,7 @@ $ kvdb-cli
 list
 > ['default', 'other_db']
 ```
-
+#### dump /load command
 for "dump" and "load" commands you can use absolute and relative path for filenames
 for example relative path of new_data.txt which exist in this repo is ./new_data.txt
 you can use .txt or .json files as you wish
@@ -136,7 +136,9 @@ you can use .txt or .json files as you wish
 # dump db_name path
 dump default ./default.json
 > OK
+```
 
+```
 # load path db_name
 load ./default.json default
 ```
