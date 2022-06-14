@@ -52,13 +52,13 @@ You can edit the content and provide your own custom default settings.
 To run the KVDB server with the default configurations, simply run:
 
 ```
-KVDB-server
+kvdb-server
 ```
 
 You can also pass in additional parameters through the command line:
 
 ```
-usage: KVDB-server [-h HOST] [-p PORT] [-d KV_DIR] [-s KV_SRC] [-H]
+usage: kvdb-server [-h HOST] [-p PORT] [-d KV_DIR] [-s KV_SRC] [-H]
 
 KVDB Server
 
@@ -75,7 +75,7 @@ optional arguments:
 Example usage:
 
 ```
-$ KVDB-server
+$ kvdb-server
 Server listening @ 127.0.0.1 on port 9876
 ```
 
@@ -85,7 +85,7 @@ LittleKV comes equipped with a command line interface that you can use to run co
 To run the KVDB CLI with the default configurrations, simply run:
 
 ```
-KVDB-cli
+kvdb-cli
 ```
 
 You can also pass in additional parameters through the command line:
@@ -107,22 +107,36 @@ optional arguments:
 Example usage:
 
 ```
-$ KVDB-cli
+$ kvdb-cli
 # ping
 ping
 > PONG 
 
-$ KVDB-cli
+$ kvdb-cli
 # set key value
 set test foo
 > OK
-$ KVDB-cli
+
+$ kvdb-cli
 # get key
 get test
 > foo
-$ KVDB-cli
+
+$ kvdb-cli
 # list
 list
 > ['default', 'other_db']
+```
 
+for "dump" and "load" commands you can use absolute and relative path for filenames
+for example relative path of new_data.txt which exist in this repo is ./new_data.txt
+you can use .txt or .json files as you wish
+
+```
+# dump db_name path
+dump default ./default.json
+> OK
+
+# load path db_name
+load ./default.json default
 ```

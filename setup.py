@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='in-memory-key-value-db',
+    name='kvdb',
     version='1.0',
     description='A lightweight in-memory key-value store',
     author='Seyed Emad Mousavi',
