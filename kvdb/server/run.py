@@ -8,9 +8,9 @@ def main():
     env = Env()
     env.read_env()
     
-    args = env.str('HOST',parse_server_args())
+    args = parse_server_args()
     
-    host = args.host
+    host = env.str('HOST',args.host)
     port = args.port
     kv_dir = args.kv_dir
     kv_source = args.kv_src
