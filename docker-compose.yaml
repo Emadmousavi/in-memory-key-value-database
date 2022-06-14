@@ -12,9 +12,9 @@ services:
     container_name: kvdb_cli
     command: kvdb-cli
     volumes:
-      - data:/usr/src/app/data
-    environment:
-      - HOST=server
+      - data:./data
+    env_file:
+      - ./kvdb/server/.env
     
     depends_on:
       - server
