@@ -11,14 +11,8 @@ services:
     build: .
     container_name: kvdb_cli
     command: kvdb-cli
-    volumes:
-      - data:./data
     env_file:
       - ./kvdb/server/.env
     
     depends_on:
       - server
-
-volumes:
-  data:
-
