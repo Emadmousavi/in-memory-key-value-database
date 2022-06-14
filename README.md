@@ -30,7 +30,17 @@ then create a virtual environment. in this case virtual environment name is 'ven
 python -m venv venv
 ```
 
-The required packages are listed in the Pipfile. To install those dependencies, run:
+activate venv in windows
+```
+.\venv\Scripts\activate
+```
+
+activate venv in linux
+```
+source ./venv/bin/activate
+```
+
+The required packages are listed in the requirements.txt To install those dependencies, run:
 
 ```
 pip install -r requirements.txt
