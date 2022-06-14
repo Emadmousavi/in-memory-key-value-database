@@ -129,7 +129,9 @@ list
 ```
 #### dump / load command
 for "dump" and "load" commands you can use absolute and relative path for filenames
+
 for example relative path of new_data.txt which exist in this repo is ./new_data.txt
+
 you can use .txt or .json files as you wish
 
 ```
