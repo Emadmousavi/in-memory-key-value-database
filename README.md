@@ -35,7 +35,11 @@ The required packages are listed in the Pipfile. To install those dependencies, 
 ```
 pip install -r requirements.txt
 ```
-
+## install kvdb module
+after that enter the command below 
+```
+python setup.py install
+```
 ## Running KVDB
 
 #### Default configurations
@@ -103,14 +107,22 @@ optional arguments:
 Example usage:
 
 ```
-$ KVDB-cli ping
-PONG
-$ KVDB-cli set foo bar
-OK
-$ KVDB-cli get foo
-bar
-$ KVDB-cli clear
-OK
-$ KVDB-cli count
-0
+$ KVDB-cli
+# ping
+ping
+> PONG 
+
+$ KVDB-cli
+# set key value
+set test foo
+> OK
+$ KVDB-cli
+# get key
+get test
+> foo
+$ KVDB-cli
+# list
+list
+> ['default', 'other_db']
+
 ```
